@@ -68,7 +68,7 @@ const packages = Object.keys(dependencies)
 if (!!packages) {
   try {
     console.log("yarn add " + packages);
-    childProcess.execSync("yarn add " + packages, { stdio: [0, 1, 2] });
+    childProcess.execSync("RSTT_NO_YARNPOSTINSTALL=1 yarn add " + packages, { stdio: [0, 1, 2] });
   } catch (err) {
     console.log("err", err);
   }
