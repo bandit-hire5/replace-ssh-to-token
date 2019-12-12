@@ -1,0 +1,34 @@
+{
+  "name": "replace-ssh-to-token",
+  "version": "0.1.0",
+  "description": "Install NPM package hosted by private Bitbucket repo.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bandit-hire5/replace-ssh-to-token"
+  },
+  "bin": {
+    "install-private-packages-from-bitbucket": "index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "replaceSshToToken": {
+    "packages": {
+      "page-builder.broker": {
+        "link": "git+ssh://git@bitbucket.org:project-phoenix/broker.git#develop"
+      },
+      "page-builder.shared": {
+        "link": "git+ssh://git@bitbucket.org:project-phoenix/shared.git#develop",
+        "env": {
+          "username": "GIT_USERNAME2"
+        }
+      }
+    },
+    "env": {
+      "username": "GIT_USERNAME",
+      "token": "GIT_TOKEN",
+      "releaseBranch": "GIT_RELEASE_BRANCH"
+    }
+  }
+}
