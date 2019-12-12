@@ -9,6 +9,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "echo \\\"!!!!!!!!!!!!!!!!BANDIT!!!!!!!!!!!!!!!!\\\" && exit 1"
+    "postinstall": "node index.js"
   }
 }
