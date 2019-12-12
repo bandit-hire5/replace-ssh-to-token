@@ -6,9 +6,9 @@
     "type": "git",
     "url": "https://github.com/bandit-hire5/replace-ssh-to-token"
   },
+  "bin": "index.js",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "postinstall": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
